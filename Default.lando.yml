@@ -1,0 +1,26 @@
+name: parent
+recipe: drupal9
+config:
+  webroot: web
+
+proxy:
+  appserver:
+    - parent.lndo.site
+    - child.lndo.site
+
+services:
+  parent:
+    type: mysql:5.7
+    portforward: 33068
+    creds:
+      user: drupal
+      password: drupal
+      database: parent
+  child:
+    type: mysql:5.7 
+    portforward: 33069
+    creds:
+      user: drupal
+      password: drupal
+      database: child
+

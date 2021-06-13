@@ -1,0 +1,7 @@
+parent:
+ root: '/app'
+ uri: 'parent.lndo.site'
+child:
+ root: /app
+ uri: 'child.lndo.site'
+
